@@ -161,7 +161,7 @@ export default function App() {
                 <h1>OpsGrid</h1>
                 <span className="logo-badge">DevOps Platform</span>
               </div>
-              <span className="logo-subtitle">Ishika's Cloud Infrastructure &amp; Live Operations Hub</span>
+              <span className="logo-subtitle">Cloud Infrastructure &amp; Incident Operations</span>
             </div>
           </div>
 
