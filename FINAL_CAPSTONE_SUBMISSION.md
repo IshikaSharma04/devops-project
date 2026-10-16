@@ -8,13 +8,13 @@
 
 ### M1 — Application: Frontend + Backend + Database (10/10 Points)
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| FastAPI backend starts and responds to `/health` | 2 | ✅ PASSED | `{"status":"healthy","database":"connected","version":"1.0.0"}` |
-| Minimum 4 REST API endpoints (GET, POST, PUT, DELETE) | 3 | ✅ PASSED | `POST /api/v1/incidents`, `GET /api/v1/incidents`, `GET /api/v1/incidents/{id}`, `PUT /api/v1/incidents/{id}`, `DELETE /api/v1/incidents/{id}`, `/services`, `/stats` |
-| PostgreSQL database with table managed by Alembic | 2 | ✅ PASSED | `backend/alembic/versions/001_initial_incident_schema.py` defines `incidents` and `services` tables |
-| React/HTML frontend renders and makes API calls | 2 | ✅ PASSED | Modern React 18 + Vite frontend with live API polling, KPI cards, and modals |
-| Responsive and usable UI (not a blank page) | 1 | ✅ PASSED | Glassmorphic dark design system with search, status filters, and action buttons |
+| FastAPI backend starts and responds to `/health`  | ✅ PASSED | `{"status":"healthy","database":"connected","version":"1.0.0"}` |
+| Minimum 4 REST API endpoints (GET, POST, PUT, DELETE) | ✅ PASSED | `POST /api/v1/incidents`, `GET /api/v1/incidents`, `GET /api/v1/incidents/{id}`, `PUT /api/v1/incidents/{id}`, `DELETE /api/v1/incidents/{id}`, `/services`, `/stats` |
+| PostgreSQL database with table managed by Alembic | ✅ PASSED | `backend/alembic/versions/001_initial_incident_schema.py` defines `incidents` and `services` tables |
+| React/HTML frontend renders and makes API calls  | ✅ PASSED | Modern React 18 + Vite frontend with live API polling, KPI cards, and modals |
+| Responsive and usable UI (not a blank page) | ✅ PASSED | Glassmorphic dark design system with search, status filters, and action buttons |
 
 #### Live API Response Proof:
 ```bash
@@ -26,12 +26,12 @@ $ curl -s http://localhost:8000/health
 
 ### M2 — Testing:
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement  | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| `pytest` runs without errors | 3 | ✅ PASSED | 11/11 tests passing in 0.08s |
-| Minimum 5 test cases covering at least 3 API endpoints | 4 | ✅ PASSED | 11 tests covering `/health`, `/metrics`, `POST`, `GET`, `PUT`, `DELETE`, `/services`, `/stats` |
-| Tests use a test database or mock, not production | 2 | ✅ PASSED | In-memory SQLite with `StaticPool` and dependency overrides in `conftest.py` |
-| `pytest.ini` or `conftest.py` is present and configured | 1 | ✅ PASSED | `backend/pytest.ini` and `backend/tests/conftest.py` |
+| `pytest` runs without errors | ✅ PASSED | 11/11 tests passing in 0.08s |
+| Minimum 5 test cases covering at least 3 API endpoints | ✅ PASSED | 11 tests covering `/health`, `/metrics`, `POST`, `GET`, `PUT`, `DELETE`, `/services`, `/stats` |
+| Tests use a test database or mock, not production | ✅ PASSED | In-memory SQLite with `StaticPool` and dependency overrides in `conftest.py` |
+| `pytest.ini` or `conftest.py` is present and configured  | ✅ PASSED | `backend/pytest.ini` and `backend/tests/conftest.py` |
 
 #### Terminal Output (`pytest -v`):
 ```text
@@ -60,22 +60,22 @@ backend/tests/test_incidents.py::test_stats_endpoint PASSED              [100%]
 
 ### M3 — Git and GitHub 
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| Public GitHub repository linked | 2 | ✅ PASSED | Repository configured on branch `main` |
-| Meaningful commit messages | 2 | ✅ PASSED | Conventional commits (`feat`, `chore`, `docs`, `fix`) |
-| `.gitignore` excludes `.env`, `__pycache__`, `node_modules`, `.venv` | 1 | ✅ PASSED | Excludes all credentials, caches, build files, and terraform state |
+| Public GitHub repository linked  | ✅ PASSED | Repository configured on branch `main` |
+| Meaningful commit messages | ✅ PASSED | Conventional commits (`feat`, `chore`, `docs`, `fix`) |
+| `.gitignore` excludes `.env`, `__pycache__`, `node_modules`, `.venv` | ✅ PASSED | Excludes all credentials, caches, build files, and terraform state |
 
 ---
 
 ### M4 — Docker: Dockerfile + Compose 
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement | Status | Verification Evidence |
 | :--- | :---: | :---: | :---: |
-| `backend/Dockerfile` builds successfully | 2 | ✅ PASSED | Debian trixie slim with Python 3.11 |
-| `frontend/Dockerfile` uses multi-stage build | 3 | ✅ PASSED | Stage 1: `node:20-alpine` (build), Stage 2: `nginx:alpine` (runtime) |
-| Docker images run as non-root users | 2 | ✅ PASSED | Backend: `appuser` (UID 10001), Frontend: `nginx` (UID 101) |
-| `docker compose up --build` starts all 3 services | 3 | ✅ PASSED | All 3 services (`postgres`, `backend`, `frontend`) healthy and running |
+| `backend/Dockerfile` builds successfully  | ✅ PASSED | Debian trixie slim with Python 3.11 |
+| `frontend/Dockerfile` uses multi-stage build | ✅ PASSED | Stage 1: `node:20-alpine` (build), Stage 2: `nginx:alpine` (runtime) |
+| Docker images run as non-root users| ✅ PASSED | Backend: `appuser` (UID 10001), Frontend: `nginx` (UID 101) |
+| `docker compose up --build` starts all 3 services | ✅ PASSED | All 3 services (`postgres`, `backend`, `frontend`) healthy and running |
 
 #### Non-Root Execution Verification:
 ```bash
@@ -92,39 +92,39 @@ uid=101(nginx) gid=101(nginx) groups=101(nginx)
 
 ### M5 — CI/CD: GitHub Actions Pipeline 
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement  | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| `.github/workflows/` contains workflow file | 1 | ✅ PASSED | `.github/workflows/ci-cd.yml` |
-| Pipeline triggers on push to `main` | 1 | ✅ PASSED | `on: push: branches: [ main ]` |
-| `pytest` runs as pipeline job and fails on error | 3 | ✅ PASSED | `test-backend` job executes pytest suite with postgres service container |
-| Frontend is built as part of the pipeline | 2 | ✅ PASSED | `build-frontend` job runs `npm ci` and `npm run build` |
-| Docker images are built for frontend & backend | 3 | ✅ PASSED | Multi-platform buildx steps in `build-and-push` |
-| Images pushed to GHCR | 3 | ✅ PASSED | Authenticates to `ghcr.io` via `${{ secrets.GITHUB_TOKEN }}` |
-| Image tags use Git commit SHA (not `latest`) | 2 | ✅ PASSED | Tagged with `${{ github.sha }}` and short SHA |
+| `.github/workflows/` contains workflow file  | ✅ PASSED | `.github/workflows/ci-cd.yml` |
+| Pipeline triggers on push to `main` | ✅ PASSED | `on: push: branches: [ main ]` |
+| `pytest` runs as pipeline job and fails on error | ✅ PASSED | `test-backend` job executes pytest suite with postgres service container |
+| Frontend is built as part of the pipeline | ✅ PASSED | `build-frontend` job runs `npm ci` and `npm run build` |
+| Docker images are built for frontend & backend | ✅ PASSED | Multi-platform buildx steps in `build-and-push` |
+| Images pushed to GHCR | ✅ PASSED | Authenticates to `ghcr.io` via `${{ secrets.GITHUB_TOKEN }}` |
+| Image tags use Git commit SHA (not `latest`) | ✅ PASSED | Tagged with `${{ github.sha }}` and short SHA |
 
 ---
 
 ### M6 — DevSecOps: Trivy Security Scan 
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| Trivy scan runs in CI on both backend & frontend | 3 | ✅ PASSED | `security-scan` job executes `aquasecurity/trivy-action` on both containers |
-| Pipeline configured to fail on HIGH or CRITICAL CVEs | 1 | ✅ PASSED | `exit-code: '1'`, `severity: 'CRITICAL,HIGH'` |
-| Explanation of CVE found or clean scan result | 1 | ✅ PASSED | Documented in `security/TRIVY_SECURITY_REPORT.md` |
+| Trivy scan runs in CI on both backend & frontend  | ✅ PASSED | `security-scan` job executes `aquasecurity/trivy-action` on both containers |
+| Pipeline configured to fail on HIGH or CRITICAL CVEs  | ✅ PASSED | `exit-code: '1'`, `severity: 'CRITICAL,HIGH'` |
+| Explanation of CVE found or clean scan result | ✅ PASSED | Documented in `security/TRIVY_SECURITY_REPORT.md` |
 
 ---
 
 ### M7 — Terraform: AWS Infrastructure 
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| `terraform/` directory with valid HCL files | 2 | ✅ PASSED | `versions.tf`, `providers.tf`, `variables.tf`, `vpc.tf`, `eks.tf`, `outputs.tf` |
-| `terraform init` completes without errors | 1 | ✅ PASSED | AWS provider v5.100.0 initialized cleanly |
-| `terraform plan` produces non-empty plan with no errors | 2 | ✅ PASSED | `Plan: 23 to add, 0 to change, 0 to destroy` |
-| VPC with at least two public subnets provisioned | 3 | ✅ PASSED | 2 public subnets (`10.0.1.0/24`, `10.0.2.0/24`) with IGW and NAT |
-| EKS cluster provisioned with worker node group | 4 | ✅ PASSED | `aws_eks_cluster` + `aws_eks_node_group` with IAM roles |
-| `terraform destroy` tears down all resources cleanly | 2 | ✅ PASSED | Fully managed resource dependency graph without orphaned state |
-| `terraform.tfvars.example` present (no real credentials) | 1 | ✅ PASSED | `terraform/terraform.tfvars.example` included |
+| `terraform/` directory with valid HCL files | ✅ PASSED | `versions.tf`, `providers.tf`, `variables.tf`, `vpc.tf`, `eks.tf`, `outputs.tf` |
+| `terraform init` completes without errors | ✅ PASSED | AWS provider v5.100.0 initialized cleanly |
+| `terraform plan` produces non-empty plan with no errors | ✅ PASSED | `Plan: 23 to add, 0 to change, 0 to destroy` |
+| VPC with at least two public subnets provisioned  | ✅ PASSED | 2 public subnets (`10.0.1.0/24`, `10.0.2.0/24`) with IGW and NAT |
+| EKS cluster provisioned with worker node group  | ✅ PASSED | `aws_eks_cluster` + `aws_eks_node_group` with IAM roles |
+| `terraform destroy` tears down all resources cleanly  | ✅ PASSED | Fully managed resource dependency graph without orphaned state |
+| `terraform.tfvars.example` present (no real credentials) | ✅ PASSED | `terraform/terraform.tfvars.example` included |
 
 #### Terraform Plan Verification Output:
 ```text
@@ -134,15 +134,15 @@ Plan: 23 to add, 0 to change, 0 to destroy.
 ---
 
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| `k8s/namespace.yaml` exists and applies cleanly | 1 | ✅ PASSED | Creates dedicated `cloudpulse` namespace |
-| Helm chart in `helm/` directory with templates | 3 | ✅ PASSED | `Chart.yaml`, `values.yaml`, and 9 templates in `helm/templates/` |
-| `helm upgrade --install` deploys without errors | 3 | ✅ PASSED | Deployed release `cloudpulse` revision 1 |
-| Deployments running with at least 2 replicas each | 2 | ✅ PASSED | `cloudpulse-backend` (2 replicas), `cloudpulse-frontend` (2 replicas) |
-| ClusterIP Services expose backend and frontend | 2 | ✅ PASSED | `cloudpulse-backend` (:8000), `cloudpulse-frontend` (:80) |
-| Ingress resource routes `/` to frontend and `/api` to backend | 2 | ✅ PASSED | Ingress rules configured in `helm/templates/ingress.yaml` |
-| `kubectl get pods -n <namespace>` shows all Running | 2 | ✅ PASSED | 5/5 pods in `Running` state |
+| `k8s/namespace.yaml` exists and applies cleanly | ✅ PASSED | Creates dedicated `cloudpulse` namespace |
+| Helm chart in `helm/` directory with templates| ✅ PASSED | `Chart.yaml`, `values.yaml`, and 9 templates in `helm/templates/` |
+| `helm upgrade --install` deploys without errors | ✅ PASSED | Deployed release `cloudpulse` revision 1 |
+| Deployments running with at least 2 replicas each  | ✅ PASSED | `cloudpulse-backend` (2 replicas), `cloudpulse-frontend` (2 replicas) |
+| ClusterIP Services expose backend and frontend  | ✅ PASSED | `cloudpulse-backend` (:8000), `cloudpulse-frontend` (:80) |
+| Ingress resource routes `/` to frontend and `/api` to backend | ✅ PASSED | Ingress rules configured in `helm/templates/ingress.yaml` |
+| `kubectl get pods -n <namespace>` shows all Running | ✅ PASSED | 5/5 pods in `Running` state |
 
 #### Live Cluster Status:
 ```text
@@ -159,12 +159,12 @@ cloudpulse-postgres-7c49f4f44d-wsxgt   1/1     Running   0          2m
 
 ### M9 
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| `/metrics` returns Prometheus-formatted output | 2 | ✅ PASSED | Returns `http_requests_total`, `process_cpu_seconds`, etc. |
-| Prometheus installed and scraping the application | 3 | ✅ PASSED | Scrapes `cloudpulse-backend`, target status is **`UP`** |
-| Grafana is installed and accessible | 2 | ✅ PASSED | Accessible at `http://localhost:3001` with database "ok" |
-| Grafana panel shows live application metrics | 3 | ✅ PASSED | `monitoring/dashboards/cloudpulse-overview.json` with 6 metric panels |
+| `/metrics` returns Prometheus-formatted output| ✅ PASSED | Returns `http_requests_total`, `process_cpu_seconds`, etc. |
+| Prometheus installed and scraping the application| ✅ PASSED | Scrapes `cloudpulse-backend`, target status is **`UP`** |
+| Grafana is installed and accessible| ✅ PASSED | Accessible at `http://localhost:3001` with database "ok" |
+| Grafana panel shows live application metrics| ✅ PASSED | `monitoring/dashboards/cloudpulse-overview.json` with 6 metric panels |
 
 #### Prometheus Scrape Verification:
 ```json
@@ -189,10 +189,10 @@ cloudpulse-postgres-7c49f4f44d-wsxgt   1/1     Running   0          2m
 
 ### M10 — Final Presentation + Documentation (5/5 Points)
 
-| Requirement | Points | Status | Verification Evidence |
+| Requirement| Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
-| `README.md` explaining application and architecture | 2 | ✅ PASSED | Production root `README.md` with Mermaid diagram, quickstart, and commands |
-| Live demo walkthrough instructions | 3 | ✅ PASSED | Step-by-step presentation script in `LIVE_DEMO_SCRIPT.md` |
+| `README.md` explaining application and architecture | ✅ PASSED | Production root `README.md` with Mermaid diagram, quickstart, and commands |
+| Live demo walkthrough instructions| ✅ PASSED | Step-by-step presentation script in `LIVE_DEMO_SCRIPT.md` |
 
 ---
 
