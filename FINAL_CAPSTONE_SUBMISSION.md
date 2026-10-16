@@ -1,11 +1,6 @@
 # Session 21 — DevOps Final Capstone Project: Submission & Evaluation Dossier
 
-**Student Name:** Ishika Sharma  
-**Enrollment ID:** 24BCS10350  
-**Project Name:** OpsGrid — SRE Reliability & Cloud Operations Platform  
-**Repository Branch:** `main`  
-**Date:** October 15, 2026  
-**Total Target Score:** 100 / 100 Points  
+
 
 ---
 
@@ -29,7 +24,7 @@ $ curl -s http://localhost:8000/health
 
 ---
 
-### M2 — Testing: Pytest + Code Quality (10/10 Points)
+### M2 — Testing:
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
@@ -63,7 +58,7 @@ backend/tests/test_incidents.py::test_stats_endpoint PASSED              [100%]
 
 ---
 
-### M3 — Git and GitHub (5/5 Points)
+### M3 — Git and GitHub 
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
@@ -73,7 +68,7 @@ backend/tests/test_incidents.py::test_stats_endpoint PASSED              [100%]
 
 ---
 
-### M4 — Docker: Dockerfile + Compose (10/10 Points)
+### M4 — Docker: Dockerfile + Compose 
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :---: |
@@ -95,7 +90,7 @@ uid=101(nginx) gid=101(nginx) groups=101(nginx)
 
 ---
 
-### M5 — CI/CD: GitHub Actions Pipeline (15/15 Points)
+### M5 — CI/CD: GitHub Actions Pipeline 
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
@@ -109,7 +104,7 @@ uid=101(nginx) gid=101(nginx) groups=101(nginx)
 
 ---
 
-### M6 — DevSecOps: Trivy Security Scan (5/5 Points)
+### M6 — DevSecOps: Trivy Security Scan 
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
@@ -119,7 +114,7 @@ uid=101(nginx) gid=101(nginx) groups=101(nginx)
 
 ---
 
-### M7 — Terraform: AWS Infrastructure as Code (15/15 Points)
+### M7 — Terraform: AWS Infrastructure 
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
@@ -138,7 +133,6 @@ Plan: 23 to add, 0 to change, 0 to destroy.
 
 ---
 
-### M8 — Kubernetes + Helm (15/15 Points)
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
@@ -163,7 +157,7 @@ cloudpulse-postgres-7c49f4f44d-wsxgt   1/1     Running   0          2m
 
 ---
 
-### M9 — Observability: Prometheus + Grafana (10/10 Points)
+### M9 
 
 | Requirement | Points | Status | Verification Evidence |
 | :--- | :---: | :---: | :--- |
@@ -202,6 +196,4 @@ cloudpulse-postgres-7c49f4f44d-wsxgt   1/1     Running   0          2m
 
 ---
 
-## 🎯 Final Capstone Score Summary
 
-$$\mathbf{10 + 10 + 5 + 10 + 15 + 5 + 15 + 15 + 10 + 5 = 100 / 100\ Points}$$
