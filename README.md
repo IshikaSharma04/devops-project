@@ -143,4 +143,29 @@ The `.github/workflows/ci-cd.yml` workflow runs automatically on every push to `
 3. **Security:** Runs Trivy vulnerability scanner to flag high/critical CVEs in container images.
 4. **Publish:** Builds and tags Docker images for deployment.
 
+dashboard :
+<img width="2828" height="1569" alt="image" src="https://github.com/user-attachments/assets/1d8b30da-e7f5-4e6b-ac70-93909e278794" />
+
+dockercompose :
+<img width="1906" height="302" alt="image" src="https://github.com/user-attachments/assets/cfad3c8e-8f4a-4c71-8bfa-d8aa9de3066e" />
+
+pytest :
+<img width="1530" height="616" alt="image" src="https://github.com/user-attachments/assets/0bc4345b-5ec3-4e6d-bb74-83deeba0266d" />
+<img width="1720" height="230" alt="image" src="https://github.com/user-attachments/assets/9fc40ac3-7243-46a0-a938-3fc8dbff7bb8" />
+
+githubrepo :
+<img width="1514" height="1372" alt="image" src="https://github.com/user-attachments/assets/6f2148c5-aa3c-45a7-89c6-1038fe0beba4" />
+
+pipeline :
+<img width="1796" height="692" alt="image" src="https://github.com/user-attachments/assets/57d8ac14-02e0-47e9-baf1-95528f89a4eb" />
+<img width="1640" height="584" alt="image" src="https://github.com/user-attachments/assets/e859d930-745b-4c0d-8df9-02b3f571bde5" />
+
+packages :
+<img width="1758" height="572" alt="image" src="https://github.com/user-attachments/assets/938dc543-3cca-4e14-824a-fed61ed00a94" />
+
+trivyscan:
+<img width="1410" height="1086" alt="image" src="https://github.com/user-attachments/assets/1a711b9f-5bc3-4dca-84bd-3b43b144aef7" />
+
+prmetheus metrics :
+<img width="2492" height="1681" alt="image" src="https://github.com/user-attachments/assets/dc8410cc-1302-41d9-955c-66811479387a" />
 
