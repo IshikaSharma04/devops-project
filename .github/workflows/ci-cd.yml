@@ -14,8 +14,8 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  BACKEND_IMAGE_NAME: ${{ github.repository_owner }}/opsgrid-backend
-  FRONTEND_IMAGE_NAME: ${{ github.repository_owner }}/opsgrid-frontend
+  BACKEND_IMAGE_NAME: ishikasharma04/opsgrid-backend
+  FRONTEND_IMAGE_NAME: ishikasharma04/opsgrid-frontend
 
 jobs:
   test-backend:

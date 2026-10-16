@@ -154,9 +154,6 @@ export default function App() {
           </div>
 
           <div className="header-actions">
-            <div className="cluster-pill">
-              <span>eks-cluster-us-east-1</span>
-            </div>
 
             <a
               href="/metrics"
