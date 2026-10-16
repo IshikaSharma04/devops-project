@@ -169,3 +169,5 @@ trivyscan:
 prmetheus metrics :
 <img width="2492" height="1681" alt="image" src="https://github.com/user-attachments/assets/dc8410cc-1302-41d9-955c-66811479387a" />
 
+demo video :
+https://screenrec.com/share/e9YhKQrWFP
