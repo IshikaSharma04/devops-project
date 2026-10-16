@@ -144,7 +144,7 @@ The `.github/workflows/ci-cd.yml` workflow runs automatically on every push to `
 4. **Publish:** Builds and tags Docker images for deployment.
 
 dashboard :
-<img width="2828" height="1569" alt="image" src="https://github.com/user-attachments/assets/1d8b30da-e7f5-4e6b-ac70-93909e278794" />
+<img width="2844" height="1616" alt="image" src="https://github.com/user-attachments/assets/b35d1d6a-8181-4eed-b6ff-d8f2eb6652cf" />
 
 dockercompose :
 <img width="1906" height="302" alt="image" src="https://github.com/user-attachments/assets/cfad3c8e-8f4a-4c71-8bfa-d8aa9de3066e" />
