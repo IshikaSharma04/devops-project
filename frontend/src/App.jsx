@@ -199,6 +199,15 @@ export default function App() {
         </div>
       </header>
 
+      <div className={`health-banner${isSystemHealthy ? '' : ' degraded'}`}>
+        <span className="health-dot"></span>
+        <span>
+          {isSystemHealthy
+            ? `System Healthy — PostgreSQL Connected — ${health.database || 'opsgrid-db'}`
+            : `System Degraded — Database: ${health.database}`}
+        </span>
+      </div>
+
       <main>
         <div className="kpi-grid">
           <div className="kpi-card">
@@ -362,7 +371,7 @@ export default function App() {
                       {inc.resolved_at && (
                         <>
                           <span>&bull;</span>
-                          <span style={{ color: 'var(--status-ok-text)' }}>
+                          <span style={{ color: 'var(--ok-text)' }}>
                             Resolved in{' '}
                             {Math.max(
                               1,
