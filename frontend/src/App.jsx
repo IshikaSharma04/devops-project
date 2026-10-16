@@ -556,9 +556,7 @@ export default function App() {
         </div>
       )}
 
-      <footer>
-        OpsGrid Platform &copy; 2026 | Cloud Infrastructure & Incident Operations
-      </footer>
+
     </div>
   );
 }
