@@ -157,7 +157,11 @@ export default function App() {
               <Layers size={18} strokeWidth={2.4} />
             </div>
             <div className="logo-title">
-              <h1>OpsGrid</h1>
+              <div className="logo-title-row">
+                <h1>OpsGrid</h1>
+                <span className="logo-badge">DevOps Platform</span>
+              </div>
+              <span className="logo-subtitle">Ishika's Cloud Infrastructure &amp; Live Operations Hub</span>
             </div>
           </div>
 
