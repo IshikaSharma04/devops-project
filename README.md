@@ -172,8 +172,6 @@ prmetheus metrics :
 demo video :
 https://screenrec.com/share/e9YhKQrWFP
 
-**Presentation:**
-
-[View Project Presentation (PPT)](./OpsGrid_Cream_Pink_Presentation.pptx)
+presentation -> https://docs.google.com/presentation/d/1erTvOiXENvO_uKsHJDamL3PORXt8w4Ej/edit?usp=drive_link&ouid=105909411794118694668&rtpof=true&sd=true
 
 
