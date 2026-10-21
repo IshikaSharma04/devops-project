@@ -172,6 +172,6 @@ prmetheus metrics :
 demo video :
 https://screenrec.com/share/e9YhKQrWFP
 
-presentation -> https://docs.google.com/presentation/d/1erTvOiXENvO_uKsHJDamL3PORXt8w4Ej/edit?usp=drive_link&ouid=105909411794118694668&rtpof=true&sd=true
+presentation -> https://drive.google.com/drive/folders/1qrcuQJgMSxDdHRvQBCk_ndH-EZwzVPwV
 
 
